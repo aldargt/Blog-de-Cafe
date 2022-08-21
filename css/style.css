@@ -24,6 +24,7 @@ body{
 .contenedor{
     max-width: 120rem;
     width: 90%;
+    /* width: min(90%, 120rem); esto hace lo mismo que las dos lineas de arriva, osea toma el valor minimo */
     margin: 0 auto;
 }
 a{
@@ -31,6 +32,7 @@ a{
 }
 h1, h2, h3, h4{
     font-family: var(--fuenteHeading);
+    line-height: 1.2;
 }
 h1{
     font-size: 4.8rem;    
@@ -75,6 +77,9 @@ img{
     .header__texto{
         margin-top: 15rem;
     }
+}
+.barra{
+    padding-top: 4rem;
 }
 @media (min-width: 768px) {
     .barra{
@@ -137,4 +142,45 @@ img{
 }
 .boton--primario{
     background-color: var(--negro);
+}
+.boton--secundario{
+    background-color: var(--primario);
+}
+
+.cursos{
+    list-style: none;/* Quitar viñetas de las listas */
+}
+.widget-curso{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type{
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.widget-curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: 700; /*o bold*/
+}
+.widget-curso__info{
+    font-weight: 400; /*o normal*/
+}
+.widget-curso__label, .widget-curso__info{
+    font-size: 2rem;
+}
+/* Footer */
+.footer{
+    background-color: var(--negro);
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+@media (min-width: 768px) {
+    .footer .barra{
+        padding-top: 0;
+    }
+}
+@media (max-width: 768px) {
+    .footer .barra{
+        padding-top: 0;
+    }
 }
