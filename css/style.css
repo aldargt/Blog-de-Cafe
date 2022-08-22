@@ -184,3 +184,55 @@ img{
         padding-top: 0;
     }
 }
+/* Sobren Nosotros */
+@media (min-width: 768px) {
+    .sobre-nosotros{
+        display: flex;
+        gap: 2rem;
+    }
+    .sobre-nosotros__imagen, .sobre-nosotros__texto{
+        flex-basis: 50%;
+    }
+    /* Este hace la separacion sin usar gap ya que algunos dispositivos no lo soportan 
+    .sobre-nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sobre-nosotros__imagen, .sobre-nosotros__texto{
+        flex-basis: calc(50% - 1rem);
+    }
+    */
+
+    /* Esto hace lo mismo que hace flex arriba, solo que este usa grid
+        .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    } */
+}
+
+/* Cursos */
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+@media (min-width: 768px) {
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.curso:last-of-type{
+    border-bottom: none;
+}
+.curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: 700; /*o bold*/
+}
+.curso__info{
+    font-weight: 400; /*o normal*/
+}
+.curso__label, .curso__info{
+    font-size: 2rem;
+}
